@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+
+</head>
+<body data-bs-theme="dark">
+    <div class="jumbotron jumbotron-fluid thread-white">
+        <div class="container">
+          <h1 class="display-4">NYSE</h1>
+          <p class="lead">User Page</p>
+        </div>
+      </div>
+
+<!--Main Navigation-->
+<header>
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+      <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3 mt-4">
+          <a href="https://www.luftfinancial.com/wp-content/uploads/2022/11/Nov-PMT-Update-Photo.jpeg" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+            <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
+          </a>
+          <a href="https://www.nyse.com/index" class="list-group-item list-group-item-action py-2 ripple active">
+            <i class="fas fa-chart-area fa-fw me-3"></i><span>Webiste traffic</span>
+          </a>
+          <a href="./Login1/index.html" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fas fa-lock fa-fw me-3"></i><span>Login/SignUp</span></a>
+          <a href="https://www.nyse.com/listings_directory/stock" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fas fa-chart-line fa-fw me-3"></i><span>Listings</span></a>
+          <a href="https://www.nyse.com/research" class="list-group-item list-group-item-action py-2 ripple">
+            <i class="fas fa-chart-pie fa-fw me-3"></i><span>Reseach</span>
+          </a>
+          <a href="https://www.msn.com/en-us/money/explorecenter?ocid=ansmsnmoney11&qry=eyJ0Ijoic3RvY2siLCJmIjpbeyJrIjoiUXVpY2sgbGlzdCBzdWdnZXN0aW9ucyIsImciOlsidG9wcGVyZnMiXX0seyJrIjoiUmVnaW9uIiwiZyI6WyJ1cyJdfV0sIm8iOiJzdF8xeXJfZGVjIn0%3D"
+            class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fas fa-chart-bar fa-fw me-3"></i><span>Stocks</span></a>
+          <a href="https://finviz.com/?gad_source=1" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fas fa-globe fa-fw me-3"></i><span>S&P 500 Index</span></a>
+          <a href="https://www.msn.com/en-us/money/explorecenter?ocid=ansmsnmoney11&qry=eyJ0IjoiaW52ZXN0b3IiLCJmIjpbeyJrIjoiUG9wdWxhciBsaXN0cyIsImciOlsicG9wdWxhciJdfV0sIm8iOiJpbnZfcG9wX2RlYyJ9"
+            class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fas fa-building fa-fw me-3"></i><span>Investors</span></a>
+          <a href="https://www.ice.com/publicdocs/futures_us/exchange_notices/ExNot2018HolidayCal.pdf" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fas fa-calendar fa-fw me-3"></i><span>Calendar</span></a>
+          <a href="https://www.ice.com/site-search?q=users&page=1" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fas fa-users fa-fw me-3"></i><span>Users</span></a>
+          <a href="https://www.ice.com/fixed-income-data-services/access-and-delivery/widget-library/time-and-sales" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fas fa-money-bill fa-fw me-3"></i><span>Sales</span></a>
+        </div>
+      </div>
+    </nav>
+    <!-- Sidebar -->
+  
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-collapse-init data-mdb-target="#sidebarMenu"
+          aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+  
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+          <img src="https://logowik.com/content/uploads/images/nyse3683.logowik.com.webp" height="100" alt="NYSE Logo"
+            loading="lazy" />
+        </a>
+        <!-- Search form -->
+        <form class="d-none d-md-flex input-group w-auto my-auto">
+          <input autocomplete="off" type="search" class="form-control rounded" href="https://www.msn.com/en-us/money/watchlist?tab=Related&id=a74pqh&ocid=ansMSNMoney11&duration=1D&src=b_secdans&relatedQuoteId=a74pqh&relatedSource=MlAl"
+            placeholder='Search stocks' style="min-width: 300px;" />
+          <span class="input-group-text border-0" >
+            <i class="fas fa-search"></i></span>
+        </form>
+  
+        <!-- Right links -->
+        <ul class="navbar-nav ms-auto d-flex flex-row">
+          <!-- Notification dropdown -->
+          <li class="nav-item dropdown">
+            <a data-mdb-dropdown-init class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="https://www.linkedin.com/in/liliya-fedyurina/" id="navbarDropdownMenuLink"
+              role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-bell"></i>
+              <span class="badge rounded-pill badge-notification bg-dark text-light">User</span>
+            </a>
+             <a data-mdb-dropdown-init class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow"
+               href="./Login1/index.html" id="navbarDropdownMenuLink" role="button"
+               data-mdb-toggle="dropdown" aria-expanded="false">
+               <i class="fas. fa-bell"></i>
+               <span class="badge rounded-pill badge-notification bg-dark text-light">Admin</span>
+             </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <a class="dropdown-item"
+                  href="https://www.msn.com/en-us/money/watchlist?tab=Related&id=a74pqh&ocid=ansMSNMoney11&duration=1D&src=b_secdans&relatedQuoteId=a74pqh&relatedSource=MlAl">Some
+                  news</a>
+              </li>
+              <li>
+                <a class="dropdown-item"
+                  href="https://www.msn.com/en-us/money/explorecenter?ocid=ansmsnmoney11&qry=eyJ0IjoiaW52ZXN0b3IiLCJmIjpbeyJrIjoiUG9wdWxhciBsaXN0cyIsImciOlsicG9wdWxhciJdfV0sIm8iOiJpbnZfcG9wX2RlYyJ9">AFind
+                  your perfect investment match!</a>
+              </li>
+              
+            </ul>
+          </li>
+  
+          <!-- Icon -->
+          <li class="nav-item">
+            <a class="nav-link me-3 me-lg-0" href="#">
+              <i class="fas fa-fill-drip"></i>
+            </a>
+          </li>
+          <!-- Icon -->
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+  
+          <!-- Icon dropdown -->
+          <li class="nav-item dropdown">
+            <a data-mdb-dropdown-init class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdown"
+              role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+              <i class="united kingdom flag m-0"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="#"><i class="united kingdom flag"></i>English
+                  <i class="fa fa-check text-success ms-2"></i></a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+  
+              <li>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-flag-usa"></i>USA
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- GitHub -->
+          <li class="nav-item dropdown">
+            <a data-mdb-dropdown-init class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="https://github.com/Liliyalexx"
+              id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+              <img src="./img/githublogo.jpeg" class="rounded-circle"
+                height="30" alt="Avatar" loading="lazy" />
+            </a>
+          </li>
+      
+    <!-- Navbar -->
+  </header>
+  <!--Main Navigation-->
+  <div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <canvas id="sp500Chart"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- Custom JavaScript to create the chart -->
+<script>
+    // Get the canvas element
+    var ctx = document.getElementById('sp500Chart').getContext('2d');
+
+    // Create the chart
+    var sp500Chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            datasets: [{
+                label: 'S&P 500 Index',
+                data: [2954, 2976, 2854, 2930, 2885, 2941, 3013, 3056, 3063, 3209, 3286, 3431], // Sample data for the S&P 500 index
+                borderColor: 'green',
+                backgroundColor: 'green',
+                borderWidth: 5
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: false
+                }
+            }
+        }
+    });
+</script>
+  <!--Main layout-->
+  <main style="margin-top: 58px;">
+    <div class="container pt-5"></div>
+  </main>
+ 
+  <div id = "firstline"class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-success" style="width: 25%">25%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-danger" style="width: 100%">100%</div>
+  </div>
+</html>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
